@@ -137,6 +137,11 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         flex-direction: column;
     }
 
+    li:hover{
+        transform: scale(2);
+        transition: all, 1s ;  
+    }
+
     nav ul li{
         display: inline;
     }
@@ -277,6 +282,10 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         padding: 30px;
     }
 
+        img:hover{
+        transform: scale(1.2);
+        transition: all, 1s;
+    }
 
     /*pie de página*/
 
