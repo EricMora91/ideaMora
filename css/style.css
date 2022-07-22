@@ -1,0 +1,769 @@
+/** Inicio de estilo en CSS **/
+/** 
+#990000
+#BE6A15
+#F3CF7A
+**/
+/** llamando a la tipografia **/
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+/** mis fuentes
+font-family: 'Yusei Magic', sans-serif;
+font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
+
+/**reseteo**/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /**mobile first**/
+
+    body{
+        background-color: #990000;
+        width: 100%;
+    }
+
+    /**dimensión de grillas**/
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+        justify-items: center;
+    }
+    
+    header{
+        display: grid;
+        gap: 10px;
+        grid-template-columns:1fr;
+        grid-template-areas: 
+        "titulo"
+        "logo";   
+        justify-items: center;
+    }
+
+    .navegacion{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "inicio" 
+        "nosotros"
+        "menú" 
+        "galeria" 
+        "contacto" ;
+        justify-items: center;
+    }
+
+    .principal{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);            grid-template-areas: 
+        "subtitulo"
+        "promo" 
+        "promo1" 
+        "promo2" 
+        "promo3" 
+        "promo4" 
+        "promo5"
+        "promo6" 
+        "promo7" 
+        "promo8";
+        justify-items: center;
+    }
+
+    aside{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "p" 
+        "img";
+        justify-items: center;
+    }
+
+    .piePagina{
+        display: grid;
+        gap: 10px;
+        grid-template-columns:0.5fr 1fr 0.5fr;
+        grid-template-areas: 
+        ". p2 ."
+        ". iconos ."
+        ". h6 .";
+        justify-items: center;
+    }
+
+    /** asignación de áreas y estilo**/
+
+    /* cabeza */
+
+    header{
+        grid-area: header;
+        width: 100%;
+    }
+
+    .titulo{
+        grid-area: titulo;
+        color: #F3CF7A;
+        font-weight: bold;
+        font-size: 50px;
+        font-family: 'Yusei Magic', sans-serif;
+        padding-top: 20px;
+    }
+
+    .logo{
+        grid-area: logo;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #BE6A15;
+        border-radius: 5px;
+    }
+
+    nav{
+        grid-area: nav;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #BE6A15;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li{
+        display: inline;
+    }
+
+    nav ul li a{
+        color: #F3CF7A;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    
+    .inicio{
+        grid-area: inicio;
+    }
+
+    .nosotros{
+        grid-area: nosotros;
+    }
+
+    .menú{
+        grid-area: menú;
+
+    }
+
+    .galeria{
+        grid-area: galeria;
+    }
+
+    .contacto{
+        grid-area: contacto;
+    }
+
+    /* contenido principal*/
+
+    main{
+        grid-area: main;
+        width: 100%;
+        color: #990000;
+        font-weight: bold;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        background-color: #F3CF7A;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        border-style: double;
+        border-width: 5px;
+        border-color: #BE6A15;
+    }
+
+    .subtitulo{
+        grid-area: subtitulo;
+        padding: 10px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #BE6A15;
+        margin-bottom: 10px;
+    }
+
+    .estiloPromo{
+        padding: 5px;
+        border-style: dotted;
+        border-width: 5px;
+        border-color: #BE6A15;
+        border-radius: 20px;
+    }
+
+    .imgStyle{
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .promo{
+        grid-area: promo;
+    }
+
+    .promo1{
+        grid-area: promo1;
+    }
+
+    .promo2{
+        grid-area: promo2;
+    }
+
+    .promo3{
+        grid-area: promo3;
+    }
+
+    .promo4{
+        grid-area: promo4;
+    }
+
+    .promo5{
+        grid-area: promo5;
+    }
+
+    .promo6{
+        grid-area: promo6;
+    }
+
+    .promo7{
+        grid-area: promo7;
+    }
+
+    .promo8{
+        grid-area: promo8;
+    }
+
+    /* información aparte*/
+
+    aside{
+        grid-area: aside;
+        width: 100%;
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-style: double;
+        border-width: 5px;
+        border-color: #990000;
+        background-color: #F3CF7A;
+    }
+
+    .p{
+        grid-area: p;
+        padding-left: 20px;
+    }
+
+    .img{
+        grid-area: img;
+        border-radius: 50px;
+        padding: 30px;
+    }
+
+
+    /*pie de página*/
+
+    footer{
+        grid-area: footer;
+        width: 100%;
+        color: #990000;
+        font-family:  'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        background-image: url("../images/footer3.jpg");
+        background-size: contain;
+        background-position: bottom;
+        padding-top: 20px;
+        border-style: double;
+        border-width: 5px;
+        border-color: #BE6A15;
+    }
+
+    .p2{
+        grid-area: p2;
+    }
+
+    .iconos{
+        grid-area: iconos;
+    }
+
+    .iconos li{
+        display: inline;    
+    }
+
+    .h6{
+        grid-area: h6;
+        color: black;
+        text-shadow: 1px 1px 1px #F3CF7A;
+    }
+
+
+    /**tamaño responsive para tablet**/
+
+@media screen and (min-width: 768px){
+
+    .navegacion{
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-areas:             
+        "inicio nosotros" 
+        "menú galeria" 
+        "contacto ."  ;
+    }
+
+    nav{
+        padding: 20px;
+    }
+
+    .principal{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "subtitulo subtitulo"
+        "promo promo1" 
+        "promo2 promo3" 
+        "promo4 promo5"
+        "promo6 promo7" 
+        "promo8 .";
+    }
+}
+
+    /**tamaño responsive para desktop**/
+@media screen and (min-width: 1024px){
+
+    .navegacion{
+        display: grid;
+        grid-template-columns:repeat(5, 1fr);
+        grid-template-areas: 
+        "inicio nosotros menú galeria contacto";
+    }
+
+    header{
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-areas:
+        ". . ."
+        "titulo titulo titulo"
+        "logo logo logo";
+        justify-items: start;
+        padding-left: 50px;
+    }
+
+    .principal{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        ". subtitulo ."
+        "promo promo1 promo2"
+        "promo3 promo4 promo5"
+        "promo6 promo7 promo8";
+    }
+
+}
+/** Aquí termina el estilo del index**/
+
+/**Aquí inicia el estilo del main en nosotros**/
+
+/**mobile first**/
+
+    .containerNosotros{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+        align-items: center;
+    }
+
+    .recuerdo{
+        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "rec1" 
+        "rec2";
+        align-items: center;
+    }
+        
+    .navNosotros{
+        margin-top: 50px;
+        margin-right: 210px;
+        margin-bottom: 50px;
+        margin-left: 210px;
+    }
+
+    .pregunta{
+        grid-area: pregunta;
+    }
+
+    .recuerdo{
+        grid-area: recuerdo;
+    }
+
+    .rec1{
+        grid-area: rec1;
+    }
+
+    .rec2{
+        grid-area: rec2;
+    }
+
+    .imgStyleN{
+        width: 100%;
+        padding: 5px;
+        border-style: dotted;
+        border-width: 5px;
+        border-color: #BE6A15;
+        border-radius: 20px;
+    }
+
+    /**tamaño responsive para tablet**/
+
+@media screen and (min-width: 768px){
+    
+        .recuerdo{
+        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "rec1 rec2";
+    } 
+
+}
+
+        /**tamaño responsive para desktop**/
+
+@media screen and (min-width: 1024px){
+    .recuerdo{
+        gap: 100px;
+        }
+
+    .imgStyleN{
+        padding: 10px;
+        border-style: dotted;
+        border-width: 5px;  
+        border-radius: 100px;
+    }
+    
+    }
+
+/** Aquí inicia el estilo de la pagina menú" **/
+
+    /**mobile first**/
+
+    .containerMenu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+        justify-items: center;
+    }
+
+
+/**tamaño responsive table**/
+    @media screen and (min-width: 678px){
+
+        .subtituloM{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-style: solid;
+            border-width: 5px;
+            border-color: #BE6A15;
+            margin-bottom: 50px;
+        }
+
+        iframe{
+            padding: 5px;
+            border-style: dotted;
+            border-width: 5px;
+            border-color: #BE6A15;
+            border-radius: 20px;
+        }
+    }
+
+    /**tamaño responsive desktop**/
+
+    @media screen and (min-width: 1024px){
+
+        iframe{
+            padding: 20px;
+            border-radius: 80px;
+        }
+    
+    }
+
+/** aquí termina el estilo de la página menú**/
+
+/** Aquí inicia el estilo del main de la "galería" **/
+
+    /**mobile first**/
+
+    /**dimensión de grillas**/
+
+    .containerGaleria{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+        justify-items: center;
+    }
+
+    .subtituloMex{
+        text-align: center;
+        padding: 10px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #BE6A15;
+        margin-right:  100px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+    }
+
+    .galeriaCdmx{
+        display:grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "cafeteria1"
+        "cafeteria2"
+        "cafeteria3"
+        "cafeteria4"
+        "cafeteria10"
+        "cafeteria11";
+        justify-items: center;
+    }
+
+    .subtituloVeracruz{
+        text-align: center;
+        padding: 10px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #BE6A15;
+        margin-right:  100px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+    }
+
+    .galeriaVeracruz{
+        display:grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "cafeteria5"
+        "cafeteria"
+        "cafeteria7"
+        "cafeteria8"
+        "cafeteria9"
+        "cafeteria12";
+        justify-items: center;
+    }
+
+    /** asignación de áreas y estilo**/
+
+    .cafeteria1{
+        grid-area: cafeteria1;
+    }
+
+    .cafeteria2{
+        grid-area: cafeteria2;
+    }
+
+    .cafeteria3{
+        grid-area: cafeteria3;
+    }
+
+    .cafeteria4{
+        grid-area: cafeteria4;
+    }
+
+    .cafeteria5{
+        grid-area: cafeteria5;
+    }
+
+    .cafeteria6{
+        grid-area: cafeteria6;
+    }
+
+    .cafeteria7{
+        grid-area: cafeteria7;
+    }
+
+    .cafeteria8{
+        grid-area: cafeteria8;
+    }
+
+    .cafeteria9{
+        grid-area: cafeteria9;
+    }
+
+    .cafeteria11{
+        grid-area: cafeteria11;
+    }
+
+    .cafeteria12{
+        grid-area: cafeteria12;
+    }
+
+/** encabezado **/
+
+    .headerGaleria{
+        width: 100%;
+    }
+
+/** contenido principal**/ 
+
+    .mainGaleria{
+        width: 100%;
+    }
+
+    .imgStyleG{
+        padding: 10px;
+        border-style: dotted;
+        border-width: 5px;
+        border-color: #BE6A15;
+        border-radius: 50px;
+        width:100%
+    }
+
+    .cafeterias{
+        padding: 30px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #BE6A15;
+        border-radius: 20px;
+    }
+
+/**footer**/
+
+    footer{
+        width: 100%;
+    }
+
+/**tamaño responsive para tablet**/
+
+@media screen and (min-width: 768px){
+
+    .galeriaCdmx{
+        display:grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "cafeteria1 cafeteria2"
+        "cafeteria3 cafeteria4"
+        "cafeteria10 cafeteria11";
+        justify-items: center;
+    }
+    
+    .galeriaVeracruz{
+        display:grid;
+        gap: 20px;
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-areas:
+        "cafeteria5 cafeteria"
+        "cafeteria7 cafeteria8"
+        "cafeteria9 cafeteria12";
+        justify-items: center;
+    }
+    
+}
+
+/**tamaño responsive desktop**/
+
+@media screen and (min-width: 1024px){
+
+    .galeriaCdmx{
+        display:grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "cafeteria1 cafeteria2 cafeteria3" "
+        "cafeteria4 cafeteria10 cafeteria11";
+        justify-items: center;
+    }
+    
+    .galeriaVeracruz{
+        display:grid;
+        gap: 20px;
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-areas:
+        "cafeteria5 cafeteria cafeteria7" 
+        "cafeteria8 cafeteria9 cafeteria12";
+        justify-items: center;
+    }
+
+}
+
+/** aquí termina el estilo de galeria**/
+
+/** Aquí inicia el estilo de la pagina contacto **/
+
+    /**mobile first**/
+
+    .containerContacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+        justify-items: center;
+    }   
+
+/**tamaño responsive table**/
+@media screen and (min-width: 678px){
+    
+        .formulario{
+            padding: 20px;
+            border-style: dotted;
+            border-width: 5px;
+            border-color: #BE6A15;
+            border-radius: 20px;   
+        }
+}
+
+    /**tamaño responsive desktop**/
+
+@media screen and (min-width: 1024px){
+
+        .formulario{
+        padding: 5px;
+        border-style: double;
+        border-width: 5px;
+        border-color: #BE6A15;
+        border-radius: 20px;
+
+    }
+    
+}
+
+/** final de estilo responsive**/
