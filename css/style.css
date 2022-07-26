@@ -27,7 +27,7 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
 
     /**dimensión de grillas**/
 
-    .container{
+    .containerInicio{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
@@ -126,6 +126,16 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         border-radius: 5px;
     }
 
+    .bg{
+        background-color:#990000;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav{
         grid-area: nav;
         border-style: solid;
@@ -155,7 +165,6 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         padding-right: 20px;
         padding-left: 20px;
     }
-
     
     .inicio{
         grid-area: inicio;
@@ -282,9 +291,13 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         padding: 30px;
     }
 
-        img:hover{
+    .scale:hover{
         transform: scale(1.2);
         transition: all, 1s;
+    }
+
+    .slide{
+        width: 90%;
     }
 
     /*pie de página*/
@@ -353,6 +366,10 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         "promo6 promo7" 
         "promo8 .";
     }
+
+    .slide{
+        width: 60%;
+    }
 }
 
     /**tamaño responsive para desktop**/
@@ -384,6 +401,10 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         "promo promo1 promo2"
         "promo3 promo4 promo5"
         "promo6 promo7 promo8";
+    }
+
+    .slide{
+        width: 40%;
     }
 
 }
@@ -438,8 +459,7 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         grid-area: rec2;
     }
 
-    .imgStyleN{
-        width: 100%;
+    .recstyle{
         padding: 5px;
         border-style: dotted;
         border-width: 5px;
@@ -447,11 +467,17 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         border-radius: 20px;
     }
 
+    .imgStyleN{
+        width: 100%;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
     /**tamaño responsive para tablet**/
 
 @media screen and (min-width: 768px){
     
-        .recuerdo{
+    .recuerdo{
         gap: 30px;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -465,17 +491,23 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
 
 @media screen and (min-width: 1024px){
     .recuerdo{
-        gap: 100px;
+        justify-items: center;
         }
 
     .imgStyleN{
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    .recstyle{
+        width: 80%;
         padding: 10px;
         border-style: dotted;
         border-width: 5px;  
-        border-radius: 100px;
+        border-radius: 50px;
     }
     
-    }
+}
 
 /** Aquí inicia el estilo de la pagina menú" **/
 
@@ -650,16 +682,17 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
 
 /** contenido principal**/ 
 
-    .mainGaleria{
-        width: 100%;
-    }
-
-    .imgStyleG{
+    .estiloG{
         padding: 10px;
         border-style: dotted;
         border-width: 5px;
         border-color: #BE6A15;
-        border-radius: 50px;
+        border-radius: 20px;
+        width:100%
+    }
+
+    .imgStyleG{
+        border-radius: 20px;
         width:100%
     }
 
