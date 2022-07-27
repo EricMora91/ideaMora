@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -13,17 +14,34 @@
         <h1 class="titulo">La Bruja Tuerta</h1>
         <img class="logo" src="../images/brujaTuerta.jpg" alt="Logo de una bruja con un caldero" height="200px" width="200px">
     </header>
-    <nav class="navNosotros">
-        <ul class="navegacion">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./nosotros.html">Nosotros</a></li>
-            <li><a href="./menu.html">Menú</a></li>    
-            <li><a href="./galeria.html">Galería</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./menu.html">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <main class="mainNosotros">
-        <h2 class="pregunta">¿Cómo surgió la Bruja Tuerta?</h2>
+        <h2>¿Cómo surgió la Bruja Tuerta?</h2>
         <br>
         <p>La idea de formar una cafetería temática mágica surgió en el año 2010, cuando la fundadora <em>"Pecas"</em>  tenía un club de fans llamado <em>"Ejército de Hogwarts"</em> dedicado a la saga famosa del joven mago. Su idea era poder reunir a personas en un lugar donde pudieran disfrutar  de alimentos y bebidas temáricas, escuchar, ver e interactuar con todo lo fantástico de este mundo mágico. Para el año 2012, la fundadora abrió un puesto de crepas llamado <em>"Lumos Creppe"</em>. Dicho lugar comenzó a ser muy frecuentado y los comensales externaron su necesidad de un lugar con una ubicación más accesible.</p>
         <br>
@@ -31,20 +49,33 @@
         <br>
         <p>Actualmente <em>"La Bruja Tuerta"</em> está siendo un éxito gracias a las visitas de personas que comparten el fanatismo hacia la saga, la variedad de alimentos y bebidas que ofrecen. La empresa no solo es una cafetería, además se pueden realizar fiestas de cumpleaños, así como eventos y campamentos alusivos al mundo mágico.</p>
         <br>
-        <div class="recuerdo">
-            <picture class="rec1">
-                <source media="(min-width:1024px)" srcset="../images/nosotros1024.jpg">
-                <source media="(min-width:768px)" srcset="../images/nosotros768.jpg">
-                <source media="(min-width:480px)" srcset="../images/nosotros.jpg">
-                <img  class="imgStyleN" src="../images/nosotros.jpg" alt="collage de fotos del club de fans de Harry Potter">
-            </picture>
-
-            <picture class="rec2">
-                <source media="(min-width:1024px)" srcset="../images/cafeteria1024.jpg">
-                <source media="(min-width:768px)" srcset="../images/cafeteria768.jpg">
-                <source media="(min-width:480px)" srcset="../images/cafeteria.jpg">
-                <img class="imgStyleN" src="../images/cafeteria.jpg" alt="clientes disfrazados con túnicas de Harry Potter">
-            </picture> 
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <picture>
+                        <source media="(min-width:1024px)" srcset="../images/nosotros1024.jpg">
+                        <source media="(min-width:768px)" srcset="../images/nosotros768.jpg">
+                        <source media="(min-width:480px)" srcset="../images/nosotros.jpg">
+                        <img  class="imgStyleN scale" src="../images/nosotros.jpg" alt="collage de fotos del club de fans de Harry Potter">
+                    </picture>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <source media="(min-width:1024px)" srcset="../images/cafeteria1024.jpg">
+                        <source media="(min-width:768px)" srcset="../images/cafeteria768.jpg">
+                        <source media="(min-width:480px)" srcset="../images/cafeteria.jpg">
+                        <img class="imgStyleN scale" src="../images/cafeteria.jpg" alt="clientes disfrazados con túnicas de Harry Potter">
+                    </picture>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>   
     </main>
     <footer class="piePagina">
@@ -56,5 +87,6 @@
         <h6 class="h6">La Bruja Tuerta Cafetería Temática</h6>  
     </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
 </body>
 </html>

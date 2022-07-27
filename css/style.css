@@ -27,7 +27,7 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
 
     /**dimensión de grillas**/
 
-    .container{
+    .containerInicio{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
@@ -46,19 +46,6 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         grid-template-areas: 
         "titulo"
         "logo";   
-        justify-items: center;
-    }
-
-    .navegacion{
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "inicio" 
-        "nosotros"
-        "menú" 
-        "galeria" 
-        "contacto" ;
         justify-items: center;
     }
 
@@ -126,6 +113,16 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         border-radius: 5px;
     }
 
+    .bg{
+        background-color:#990000;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav{
         grid-area: nav;
         border-style: solid;
@@ -133,17 +130,11 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         border-color: #BE6A15;
         margin-top: 50px;
         margin-bottom: 50px;
-        display: flex;
-        flex-direction: column;
     }
 
     li:hover{
         transform: scale(2);
         transition: all, 1s ;  
-    }
-
-    nav ul li{
-        display: inline;
     }
 
     nav ul li a{
@@ -152,10 +143,7 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         text-decoration: none;
         font-weight: bold;
         font-size: 20px;
-        padding-right: 20px;
-        padding-left: 20px;
     }
-
     
     .inicio{
         grid-area: inicio;
@@ -282,9 +270,13 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         padding: 30px;
     }
 
-        img:hover{
+    .scale:hover{
         transform: scale(1.2);
         transition: all, 1s;
+    }
+
+    .slide{
+        width: 90%;
     }
 
     /*pie de página*/
@@ -328,19 +320,6 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
 
 @media screen and (min-width: 768px){
 
-    .navegacion{
-        display: grid;
-        grid-template-columns:repeat(2, 1fr);
-        grid-template-areas:             
-        "inicio nosotros" 
-        "menú galeria" 
-        "contacto ."  ;
-    }
-
-    nav{
-        padding: 20px;
-    }
-
     .principal{
         display: grid;
         gap: 20px;
@@ -353,17 +332,14 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         "promo6 promo7" 
         "promo8 .";
     }
+
+    .slide{
+        width: 60%;
+    }
 }
 
     /**tamaño responsive para desktop**/
 @media screen and (min-width: 1024px){
-
-    .navegacion{
-        display: grid;
-        grid-template-columns:repeat(5, 1fr);
-        grid-template-areas: 
-        "inicio nosotros menú galeria contacto";
-    }
 
     header{
         grid-template-columns:repeat(3, 1fr);
@@ -386,6 +362,10 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         "promo6 promo7 promo8";
     }
 
+    .slide{
+        width: 40%;
+    }
+
 }
 /** Aquí termina el estilo del index**/
 
@@ -405,77 +385,36 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         align-items: center;
     }
 
-    .recuerdo{
-        gap: 30px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "rec1" 
-        "rec2";
-        align-items: center;
-    }
         
-    .navNosotros{
+    .navbar{
         margin-top: 50px;
-        margin-right: 210px;
+        margin-right: auto;
         margin-bottom: 50px;
-        margin-left: 210px;
-    }
-
-    .pregunta{
-        grid-area: pregunta;
-    }
-
-    .recuerdo{
-        grid-area: recuerdo;
-    }
-
-    .rec1{
-        grid-area: rec1;
-    }
-
-    .rec2{
-        grid-area: rec2;
+        margin-left: auto;
     }
 
     .imgStyleN{
         width: 100%;
-        padding: 5px;
-        border-style: dotted;
-        border-width: 5px;
-        border-color: #BE6A15;
-        border-radius: 20px;
     }
 
-    /**tamaño responsive para tablet**/
+    /**tamaño responsive para tablet**/     
 
 @media screen and (min-width: 768px){
-    
-        .recuerdo{
-        gap: 30px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "rec1 rec2";
-    } 
 
+    .imgStyleN{
+        border-radius: 20px;
+    }
 }
 
         /**tamaño responsive para desktop**/
 
 @media screen and (min-width: 1024px){
-    .recuerdo{
-        gap: 100px;
-        }
 
     .imgStyleN{
-        padding: 10px;
-        border-style: dotted;
-        border-width: 5px;  
-        border-radius: 100px;
+        border-radius: 50px;
     }
     
-    }
+}
 
 /** Aquí inicia el estilo de la pagina menú" **/
 
@@ -650,16 +589,17 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
 
 /** contenido principal**/ 
 
-    .mainGaleria{
-        width: 100%;
-    }
-
-    .imgStyleG{
+    .estiloG{
         padding: 10px;
         border-style: dotted;
         border-width: 5px;
         border-color: #BE6A15;
-        border-radius: 50px;
+        border-radius: 20px;
+        width:100%
+    }
+
+    .imgStyleG{
+        border-radius: 20px;
         width:100%
     }
 
@@ -748,15 +688,24 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
         justify-items: center;
     }   
 
+    form{
+        padding: 20px;
+        border-style: double;
+        border-width: 5px;
+        border-color: #BE6A15;
+        border-radius: 20px;   
+    }
+
+    button:hover{
+        transform: scale(1.5);
+        transition: all, 0.5s;
+    }
+
 /**tamaño responsive table**/
 @media screen and (min-width: 678px){
     
-        .formulario{
-            padding: 20px;
-            border-style: dotted;
-            border-width: 5px;
-            border-color: #BE6A15;
-            border-radius: 20px;   
+        form{
+            border-radius: 30px;   
         }
 }
 
@@ -765,11 +714,7 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
 @media screen and (min-width: 1024px){
 
         .formulario{
-        padding: 5px;
-        border-style: double;
-        border-width: 5px;
-        border-color: #BE6A15;
-        border-radius: 20px;
+        border-radius: 40px;
 
     }
     
