@@ -1,0 +1,14 @@
+/** Aquí inicia el estilo de la página galería **/
+
+    /**mobile first**/
+
+    body{
+        & .containerGaleria{
+            @include grillaMobile;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer";
+        }
+    }

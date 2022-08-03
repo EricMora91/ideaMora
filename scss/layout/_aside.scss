@@ -1,0 +1,46 @@
+/**aquí inicia el estilo del contenido aparte**/
+
+aside{
+    @include grillaMobile;
+    gap: 10px;
+    grid-template-areas: 
+    "p" 
+    "img";
+    grid-area: aside;
+    color: $color-aside;
+    font-style: italic;
+    font-weight: bold;
+    font-family:$font-principal;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include borderDouble;
+    border-color: $border-color-aside;
+    background-color: $bg-color-main;
+
+    .p{
+        grid-area: p;
+        padding-left: 20px;
+    }
+
+    & .slide{
+        width: 90%;
+
+        & .carousel-inner .carousel-item a picture .img{
+            grid-area: img;
+            border-radius: 50px;
+            padding: 30px;
+        }
+    }
+
+    @include tablet{
+        .slide{
+            width: 60%;
+    }
+    }
+
+    @include desktop{
+        .slide{
+            width: 40%;
+        }
+    }
+}

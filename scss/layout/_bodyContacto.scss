@@ -1,0 +1,14 @@
+/** Aquí inicia el estilo de la pagina contacto **/
+
+    /**mobile first**/
+
+body{
+    & .containerContacto{
+        @include grillaMobile;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }  
+}

@@ -1,0 +1,60 @@
+/**aquí inicia el estilo del nav**/
+
+.navbar{
+    background-color:#990000;
+    grid-area: nav;
+    @include borderRad;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    & ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & li .nav-link:link{
+            background-color:$bg-color-link;
+        }
+        
+        & li .nav-link:visited{
+            background-color: $bg-color-visited;
+        }
+        
+        & li .nav-link:hover{
+            background-color: $bg-color-nav-hover;  
+            @include borderRad
+        }
+        
+        & li .nav-link:active{
+            background-color: $bg-color-active;
+            transition: all,0s;
+        }
+        & li a{
+            font-family:$font-principal;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        & li .inicio{
+            grid-area: inicio;
+        }
+        
+        & li .nosotros{
+            grid-area: nosotros;
+        }
+        
+        & li .menú{
+            grid-area: menú;
+        
+        }
+        
+        & li .galeria{
+            grid-area: galeria;
+        }
+        
+        & li .contacto{
+            grid-area: contacto;
+        }
+    }
+}

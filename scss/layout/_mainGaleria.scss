@@ -1,0 +1,144 @@
+/**aquí inicia el estilo del main de la página galería**/
+
+.mainGaleria{
+    @include mainStyle;
+
+    & .subtituloCafeteria{
+        @include subtitulosGaleria;
+
+        &:hover{
+            @include hover
+        }
+    }
+
+    & .galeriaCdmx{
+        @include styleGaleria;
+        grid-template-areas:
+        "cafeteria1"
+        "cafeteria2"
+        "cafeteria3"
+        "cafeteria4"
+        "cafeteria10"
+        "cafeteria11";
+        }
+
+    & .subtituloVeracruz{
+        @include subtitulosGaleria;
+    }
+
+    & .galeriaVeracruz{
+        @include styleGaleria;
+        grid-template-areas:
+        "cafeteria5"
+        "cafeteria"
+        "cafeteria7"
+        "cafeteria8"
+        "cafeteria9"
+        "cafeteria12";
+    }    
+
+    & .cafeteria1{
+        grid-area: cafeteria1;
+    }
+
+    & .cafeteria2{
+        grid-area: cafeteria2;
+    }
+
+    & .cafeteria3{
+        grid-area: cafeteria3;
+    }
+
+    & .cafeteria4{
+        grid-area: cafeteria4;
+    }
+
+    & .cafeteria5{
+        grid-area: cafeteria5;
+    }
+
+    & .cafeteria6{
+        grid-area: cafeteria6;
+    }
+
+    & .cafeteria7{
+        grid-area: cafeteria7;
+    }
+
+    & .cafeteria8{
+        grid-area: cafeteria8;
+    }
+
+    & .cafeteria9{
+        grid-area: cafeteria9;
+    }
+
+    & .cafeteria11{
+        grid-area: cafeteria11;
+    }
+
+    & .cafeteria12{
+        grid-area: cafeteria12;
+    }
+
+    & .estiloG{
+        padding: 10px;
+        border-style: dotted;
+        border-width: 5px;
+        border-color: #BE6A15;
+        border-radius: 20px;
+        width:100%;
+
+        .imgStyleG{
+            border-radius: 20px;
+            width:100%
+        }
+
+        .scale:hover{
+            transform: scale(1.2);
+            transition: all, 1s;
+        }
+    }
+}
+
+/** aquí se aplica un breakpoint para tablet**/
+
+@include tablet{
+
+    .mainGaleria .galeriaCdmx{
+        @include galeriaTable;
+        grid-template-areas:
+        "cafeteria1 cafeteria2"
+        "cafeteria3 cafeteria4"
+        "cafeteria10 cafeteria11";
+        }
+
+    .mainGaleria .galeriaVeracruz{
+        @include galeriaTable;
+        grid-template-areas:
+        "cafeteria5 cafeteria"
+        "cafeteria7 cafeteria8"
+        "cafeteria9 cafeteria12";
+    }
+}
+
+/** aquí se aplica un breakpoint para desktop**/
+
+@include desktop{
+
+    .mainGaleria .galeriaCdmx{
+        @include galeriaDesktop;
+        grid-template-areas:
+        "cafeteria1 cafeteria2 cafeteria3"
+        "cafeteria4 cafeteria10 cafeteria11";
+    }
+    
+    .mainGaleria .galeriaVeracruz{
+        @include galeriaDesktop;
+        grid-template-areas:
+        "cafeteria5 cafeteria cafeteria7" 
+        "cafeteria8 cafeteria9 cafeteria12";
+    }
+}
+
+/** aquí termina el estilo de galeria**/

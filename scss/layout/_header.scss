@@ -1,0 +1,39 @@
+/**aquí inicia el estilo del header**/
+
+header{
+    @include grillaMobile;
+    gap: 10px;
+    grid-template-areas:
+    "titulo"
+    "logo";   
+    grid-area: header;
+
+    & .titulo{
+        grid-area: titulo;
+        color: $color-header;
+        font-weight: bold;
+        font-size: 50px;
+        font-family: $font-header;
+        padding-top: 20px;
+    }
+
+    & .logo{
+        grid-area: logo;
+        @include borderRad;
+
+        &:hover{
+            transform: rotate(6.28rad);
+            transition: all,1s;
+        }
+    }
+
+    @include desktop{
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-areas:
+        ". . ."
+        "titulo titulo titulo"
+        "logo logo logo";
+        justify-items: start;
+        padding-left: 50px;
+    }
+}

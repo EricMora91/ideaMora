@@ -1,0 +1,76 @@
+@mixin grillaMobile {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns:1fr;  
+}
+@mixin mainStyle {
+    width: 100%;
+    color: $color-main;
+    font-weight: bold;
+    font-family: $font-principal;
+    background-color:$bg-color-main;
+    @include borderDouble;
+    border-color: $border-color;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+
+@mixin borderRad{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #BE6A15;
+    border-radius: 5px;
+}
+
+@mixin borderDouble{
+    border-style: double;
+    border-width: 5px;
+}
+
+@mixin borderDotted{
+    border-style: dotted;
+    border-width: 5px;
+}
+
+@mixin subtitulosGaleria {
+    text-align: center;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #BE6A15;
+    margin-right:  100px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+@mixin styleGaleria {
+    display:grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+@mixin hover {
+    color: $color-main-hover;
+    background-color: $bg-color-main-hover;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $border-color;
+}
+
+@mixin galeriaTable {
+    display:grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+@mixin galeriaDesktop {
+    display:grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}

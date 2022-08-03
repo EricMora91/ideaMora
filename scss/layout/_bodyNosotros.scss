@@ -1,0 +1,14 @@
+/**Aquí inicia el estilo de la página nosotros**/
+
+/**mobile first**/
+
+body{
+    & .containerNosotros{
+        @include grillaMobile;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+}

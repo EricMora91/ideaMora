@@ -1,0 +1,49 @@
+/**aquí inicia el estilo del footer**/
+
+.piePagina{
+    @include grillaMobile;
+    gap: 10px;
+    grid-template-columns:0.5fr 1fr 0.5fr;
+    grid-template-areas: 
+    ". p2 ."
+    ". iconos ."
+    ". h6 .";
+    grid-area: footer;
+    color: $color-footer;
+    font-family: $font-principal;
+    font-size: 20px;
+    font-weight: bold;
+    background-image: url("../images/footer3.jpg");
+    background-size: contain;
+    background-position: bottom;
+    padding-top: 20px;
+    @include borderDouble;
+    border-color: $border-color;
+
+    .p2{
+        grid-area: p2;
+    }
+
+    .iconos{
+        grid-area: iconos;
+
+        & li{
+            display: block;
+            text-decoration: none;
+        }
+
+        & li:hover{
+            transform: scale(2);
+            transition: all,2s ;
+        }
+    
+    }
+
+    .h6{
+        grid-area: h6;
+        text-shadow: 1px 1px 1px $shadow;
+        color: $color-h6;
+    }
+}
+
+/**aquí termina el estilo del index**/

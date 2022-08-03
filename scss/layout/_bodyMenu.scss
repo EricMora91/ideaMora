@@ -1,0 +1,14 @@
+/** Aquí inicia el estilo de la pagina menú" **/
+
+    /**mobile first**/
+
+body{
+    & .containerMenu{
+        @include grillaMobile;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+}

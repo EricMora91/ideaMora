@@ -1,0 +1,27 @@
+/** Inicio de estilo en CSS **/
+/** 
+#990000
+#BE6A15
+#F3CF7A
+**/
+/** llamando a la tipografia **/
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+/** mis fuentes
+font-family: 'Yusei Magic', sans-serif;
+font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
+
+    /**mobile first**/
+
+    body{
+        background-color: $bg-color-body;
+        
+        & .containerInicio{
+            @include grillaMobile;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        }
+    }
