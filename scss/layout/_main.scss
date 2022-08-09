@@ -24,14 +24,14 @@
         border-width: 5px;
         border-color: $border-color;
         margin-bottom: 10px;
-    }
 
-    &:hover{
-        color: $color-main-hover;
-        background-color: $bg-color-main-hover;
-        border-width: 5px;
-        border-style: solid;
-        border-color: $border-color;
+        &:hover{
+            color: $color-main-hover;
+            background-color: $bg-color-main-hover;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $border-color;
+        }
     }
 
     .estiloPromo{

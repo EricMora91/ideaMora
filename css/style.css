@@ -137,12 +137,12 @@ header {
     border-width: 5px;
     border-color: #BE6A15;
     margin-bottom: 10px; }
-  .principal:hover {
-    color: #F3CF7A;
-    background-color: #990000;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #BE6A15; }
+    .principal .subtitulo:hover {
+      color: #F3CF7A;
+      background-color: #990000;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #BE6A15; }
   .principal .estiloPromo {
     padding: 5px;
     border-style: dotted;
