@@ -17,7 +17,7 @@
     grid-area: main;
     @include mainStyle;
 
-    & .subtitulo{
+    .subtitulo{
         grid-area: subtitulo;
         padding: 10px;
         border-style: solid;
@@ -26,7 +26,7 @@
         margin-bottom: 10px;
     }
 
-    & .subtitulo:hover{
+    &:hover{
         color: $color-main-hover;
         background-color: $bg-color-main-hover;
         border-width: 5px;
@@ -34,56 +34,56 @@
         border-color: $border-color;
     }
 
-    & .estiloPromo{
+    .estiloPromo{
         padding: 5px;
         @include borderDotted;
         border-color: $border-color;
         border-radius: 20px;
 
-        & .imgStyle{
+    .imgStyle{
             border-radius: 20px;
             width: 100%;
         }
 
-        .scale:hover{
+    .scale:hover{
             transform: scale(1.2);
             transition: all, 1s;
         }
     }
 
-    & .promo{
+    .promo{
         grid-area: promo;
     }
 
-    & .promo1{
+    .promo1{
         grid-area: promo1;
     }
 
-    & .promo2{
+    .promo2{
         grid-area: promo2;
     }
 
-    & .promo3{
+    .promo3{
         grid-area: promo3;
     }
 
-    & .promo4{
+    .promo4{
         grid-area: promo4;
     }
 
-    & .promo5{
+    .promo5{
         grid-area: promo5;
     }
 
-    & .promo6{
+    .promo6{
         grid-area: promo6;
     }
 
-    & .promo7{
+    .promo7{
         grid-area: promo7;
     }
 
-    & .promo8{
+    .promo8{
         grid-area: promo8;
     }
 

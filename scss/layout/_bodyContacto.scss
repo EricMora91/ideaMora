@@ -3,7 +3,7 @@
     /**mobile first**/
 
 body{
-    & .containerContacto{
+    .containerContacto{
         @include grillaMobile;
         grid-template-areas: 
         "header"

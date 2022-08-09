@@ -3,7 +3,7 @@
     /**mobile first**/
 
 body{
-    & .containerMenu{
+    .containerMenu{
         @include grillaMobile;
         grid-template-areas: 
         "header"

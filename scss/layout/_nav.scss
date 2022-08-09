@@ -7,53 +7,54 @@
     margin-top: 50px;
     margin-bottom: 50px;
 
-    & ul{
+    ul{
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        & li .nav-link:link{
+        li .nav-link:link{
             background-color:$bg-color-link;
         }
         
-        & li .nav-link:visited{
+        li .nav-link:visited{
             background-color: $bg-color-visited;
         }
         
-        & li .nav-link:hover{
+        li .nav-link:hover{
             background-color: $bg-color-nav-hover;  
             @include borderRad
         }
         
-        & li .nav-link:active{
+        li .nav-link:active{
             background-color: $bg-color-active;
             transition: all,0s;
         }
-        & li a{
+
+        li a{
             font-family:$font-principal;
             text-decoration: none;
             font-weight: bold;
             font-size: 20px;
         }
         
-        & li .inicio{
+        li .inicio{
             grid-area: inicio;
         }
         
-        & li .nosotros{
+        li .nosotros{
             grid-area: nosotros;
         }
         
-        & li .menú{
+        li .menú{
             grid-area: menú;
         
         }
         
-        & li .galeria{
+        li .galeria{
             grid-area: galeria;
         }
         
-        & li .contacto{
+        li .contacto{
             grid-area: contacto;
         }
     }

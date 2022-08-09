@@ -137,7 +137,7 @@ header {
     border-width: 5px;
     border-color: #BE6A15;
     margin-bottom: 10px; }
-  .principal .subtitulo:hover {
+  .principal:hover {
     color: #F3CF7A;
     background-color: #990000;
     border-width: 5px;
@@ -249,7 +249,7 @@ aside {
     .piePagina .iconos li {
       display: block;
       text-decoration: none; }
-    .piePagina .iconos li:hover {
+    .piePagina .iconos:hover {
       transform: scale(2);
       transition: all,2s; }
   .piePagina .h6 {
@@ -401,7 +401,7 @@ body .containerGaleria {
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px; }
-  .mainGaleria .subtituloCafeteria {
+  .mainGaleria .subtituloCafeteria, .mainGaleria .subtituloVeracruz {
     text-align: center;
     padding: 10px;
     border-style: solid;
@@ -410,7 +410,7 @@ body .containerGaleria {
     margin-right: 100px;
     margin-left: 100px;
     margin-bottom: 10px; }
-    .mainGaleria .subtituloCafeteria:hover {
+    .mainGaleria .subtituloCafeteria:hover, .mainGaleria .subtituloVeracruz:hover {
       color: #F3CF7A;
       background-color: #990000;
       border-width: 5px;
@@ -422,15 +422,6 @@ body .containerGaleria {
     grid-template-columns: 1fr;
     justify-items: center;
     grid-template-areas: "cafeteria1" "cafeteria2" "cafeteria3" "cafeteria4" "cafeteria10" "cafeteria11"; }
-  .mainGaleria .subtituloVeracruz {
-    text-align: center;
-    padding: 10px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #BE6A15;
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-bottom: 10px; }
   .mainGaleria .galeriaVeracruz {
     display: grid;
     gap: 20px;

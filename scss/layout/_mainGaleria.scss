@@ -3,15 +3,15 @@
 .mainGaleria{
     @include mainStyle;
 
-    & .subtituloCafeteria{
+    .subtituloCafeteria{
         @include subtitulosGaleria;
 
-        &:hover{
-            @include hover
+    &:hover{
+        @include hover
         }
     }
 
-    & .galeriaCdmx{
+    .galeriaCdmx{
         @include styleGaleria;
         grid-template-areas:
         "cafeteria1"
@@ -22,11 +22,11 @@
         "cafeteria11";
         }
 
-    & .subtituloVeracruz{
-        @include subtitulosGaleria;
+    .subtituloVeracruz{
+        @extend .subtituloCafeteria;
     }
 
-    & .galeriaVeracruz{
+    .galeriaVeracruz{
         @include styleGaleria;
         grid-template-areas:
         "cafeteria5"
@@ -37,51 +37,51 @@
         "cafeteria12";
     }    
 
-    & .cafeteria1{
+    .cafeteria1{
         grid-area: cafeteria1;
     }
 
-    & .cafeteria2{
+    .cafeteria2{
         grid-area: cafeteria2;
     }
 
-    & .cafeteria3{
+    .cafeteria3{
         grid-area: cafeteria3;
     }
 
-    & .cafeteria4{
+    .cafeteria4{
         grid-area: cafeteria4;
     }
 
-    & .cafeteria5{
+    .cafeteria5{
         grid-area: cafeteria5;
     }
 
-    & .cafeteria6{
+    .cafeteria6{
         grid-area: cafeteria6;
     }
 
-    & .cafeteria7{
+    .cafeteria7{
         grid-area: cafeteria7;
     }
 
-    & .cafeteria8{
+    .cafeteria8{
         grid-area: cafeteria8;
     }
 
-    & .cafeteria9{
+    .cafeteria9{
         grid-area: cafeteria9;
     }
 
-    & .cafeteria11{
+    .cafeteria11{
         grid-area: cafeteria11;
     }
 
-    & .cafeteria12{
+    .cafeteria12{
         grid-area: cafeteria12;
     }
 
-    & .estiloG{
+    .estiloG{
         padding: 10px;
         border-style: dotted;
         border-width: 5px;

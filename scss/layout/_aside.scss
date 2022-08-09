@@ -22,10 +22,10 @@ aside{
         padding-left: 20px;
     }
 
-    & .slide{
+    .slide{
         width: 90%;
 
-        & .carousel-inner .carousel-item a picture .img{
+        .carousel-inner .carousel-item a picture .img{
             grid-area: img;
             border-radius: 50px;
             padding: 30px;

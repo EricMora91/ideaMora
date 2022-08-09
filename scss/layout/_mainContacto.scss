@@ -3,13 +3,13 @@
     @include mainStyle;
     padding: 100px;
 
-    & .flip-in-ver-right{
+    .flip-in-ver-right{
         @include borderDouble;
         padding: 20px;
         border-color: #BE6A15;
         border-radius: 20px;   
 
-        & button:hover{
+        button:hover{
             transform: scale(1.5);
             transition: all, 0.5s;
         }

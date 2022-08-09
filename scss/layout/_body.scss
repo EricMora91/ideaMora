@@ -15,7 +15,7 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
     body{
         background-color: $bg-color-body;
         
-        & .containerInicio{
+        .containerInicio{
             @include grillaMobile;
             grid-template-areas: 
             "header"

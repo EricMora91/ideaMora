@@ -5,7 +5,7 @@
     width: 100%;
     text-align: center;
 
-    & h2{
+    h2{
         text-align: center;
         padding: 10px;
         border-style: solid;
@@ -18,7 +18,7 @@
         }
         }
 
-    & iframe{
+    iframe{
             padding: 5px;
             @include borderDotted;
             border-color: $border-color;

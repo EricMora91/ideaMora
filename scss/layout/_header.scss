@@ -8,7 +8,7 @@ header{
     "logo";   
     grid-area: header;
 
-    & .titulo{
+    .titulo{
         grid-area: titulo;
         color: $color-header;
         font-weight: bold;
@@ -17,7 +17,7 @@ header{
         padding-top: 20px;
     }
 
-    & .logo{
+    .logo{
         grid-area: logo;
         @include borderRad;
 

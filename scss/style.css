@@ -1,0 +1,652 @@
+@charset "UTF-8";
+/**body**/
+/**header**/
+/**nav**/
+/**main**/
+/**aside**/
+/**footer**/
+/**reseteo**/
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** Inicio de estilo en CSS **/
+/** 
+#990000
+#BE6A15
+#F3CF7A
+**/
+/** llamando a la tipografia **/
+/** mis fuentes
+font-family: 'Yusei Magic', sans-serif;
+font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
+/**mobile first**/
+body {
+  background-color: #990000;
+}
+body .containerInicio {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "main" "aside" "footer";
+}
+
+/**aquí inicia el estilo del header**/
+header {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  grid-template-areas: "titulo" "logo";
+  grid-area: header;
+}
+header .titulo {
+  grid-area: titulo;
+  color: #F3CF7A;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Yusei Magic", sans-serif;
+  padding-top: 20px;
+}
+header .logo {
+  grid-area: logo;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  border-radius: 5px;
+}
+header .logo:hover {
+  transform: rotate(6.28rad);
+  transition: all, 1s;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". . ." "titulo titulo titulo" "logo logo logo";
+    justify-items: start;
+    padding-left: 50px;
+  }
+}
+
+/**aquí inicia el estilo del nav**/
+.navbar {
+  background-color: #990000;
+  grid-area: nav;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar ul li .nav-link:link {
+  background-color: #BE6A15;
+}
+.navbar ul li .nav-link:visited {
+  background-color: #990000;
+}
+.navbar ul li .nav-link:hover {
+  background-color: #990000;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  border-radius: 5px;
+}
+.navbar ul li .nav-link:active {
+  background-color: #F3CF7A;
+  transition: all, 0s;
+}
+.navbar ul li a {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.navbar ul li .inicio {
+  grid-area: inicio;
+}
+.navbar ul li .nosotros {
+  grid-area: nosotros;
+}
+.navbar ul li .menú {
+  grid-area: menú;
+}
+.navbar ul li .galeria {
+  grid-area: galeria;
+}
+.navbar ul li .contacto {
+  grid-area: contacto;
+}
+
+/**aquí inicia el estilo del main**/
+.principal {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  grid-template-areas: "subtitulo" "promo" "promo1" "promo2" "promo3" "promo4" "promo5" "promo6" "promo7" "promo8";
+  grid-area: main;
+  width: 100%;
+  color: #990000;
+  font-weight: bold;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  background-color: #F3CF7A;
+  border-style: double;
+  border-width: 5px;
+  border-color: #BE6A15;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  /** aquí se aplica un breakpoint para tablet**/
+  /** aquí se aplica un breakpoint para desktop**/
+}
+.principal .subtitulo {
+  grid-area: subtitulo;
+  padding: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  margin-bottom: 10px;
+}
+.principal .subtitulo:hover {
+  color: #F3CF7A;
+  background-color: #990000;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #BE6A15;
+}
+.principal .estiloPromo {
+  padding: 5px;
+  border-style: dotted;
+  border-width: 5px;
+  border-color: #BE6A15;
+  border-radius: 20px;
+}
+.principal .estiloPromo .imgStyle {
+  border-radius: 20px;
+  width: 100%;
+}
+.principal .estiloPromo .scale:hover {
+  transform: scale(1.2);
+  transition: all, 1s;
+}
+.principal .promo {
+  grid-area: promo;
+}
+.principal .promo1 {
+  grid-area: promo1;
+}
+.principal .promo2 {
+  grid-area: promo2;
+}
+.principal .promo3 {
+  grid-area: promo3;
+}
+.principal .promo4 {
+  grid-area: promo4;
+}
+.principal .promo5 {
+  grid-area: promo5;
+}
+.principal .promo6 {
+  grid-area: promo6;
+}
+.principal .promo7 {
+  grid-area: promo7;
+}
+.principal .promo8 {
+  grid-area: promo8;
+}
+@media screen and (min-width: 768px) {
+  .principal {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "subtitulo subtitulo" "promo promo1" "promo2 promo3" "promo4 promo5" "promo6 promo7" "promo8 .";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .principal {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". subtitulo ." "promo promo1 promo2" "promo3 promo4 promo5" "promo6 promo7 promo8";
+  }
+}
+
+/**aquí inicia el estilo del contenido aparte**/
+aside {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  grid-template-areas: "p" "img";
+  grid-area: aside;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-style: double;
+  border-width: 5px;
+  border-color: #990000;
+  background-color: #F3CF7A;
+}
+aside .p {
+  grid-area: p;
+  padding-left: 20px;
+}
+aside .slide {
+  width: 90%;
+}
+aside .slide .carousel-inner .carousel-item a picture .img {
+  grid-area: img;
+  border-radius: 50px;
+  padding: 30px;
+}
+@media screen and (min-width: 768px) {
+  aside .slide {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  aside .slide {
+    width: 40%;
+  }
+}
+
+/**aquí inicia el estilo del footer**/
+.piePagina {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-areas: ". p2 ." ". iconos ." ". h6 .";
+  grid-area: footer;
+  color: #990000;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background-image: url("../images/footer3.jpg");
+  background-size: contain;
+  background-position: bottom;
+  padding-top: 20px;
+  border-style: double;
+  border-width: 5px;
+  border-color: #BE6A15;
+}
+.piePagina .p2 {
+  grid-area: p2;
+}
+.piePagina .iconos {
+  grid-area: iconos;
+}
+.piePagina .iconos li {
+  display: block;
+  text-decoration: none;
+}
+.piePagina .iconos li:hover {
+  transform: scale(2);
+  transition: all, 2s;
+}
+.piePagina .h6 {
+  grid-area: h6;
+  text-shadow: 1px 1px 1px #F3CF7A;
+  color: black;
+}
+
+/**aquí termina el estilo del index**/
+/**Aquí inicia el estilo de la página nosotros**/
+/**mobile first**/
+body .containerNosotros {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "main" "footer";
+}
+
+/**aquí inicia el estilo del main de la página nosotros**/
+.mainNosotros {
+  width: 100%;
+  color: #990000;
+  font-weight: bold;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  background-color: #F3CF7A;
+  border-style: double;
+  border-width: 5px;
+  border-color: #BE6A15;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+.mainNosotros h2 {
+  text-align: center;
+  padding: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  margin-bottom: 10px;
+}
+.mainNosotros h2:hover {
+  color: #F3CF7A;
+  background-color: #990000;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #BE6A15;
+}
+
+.flip-in-ver-right {
+  width: 100%;
+  -webkit-animation: flip-in-ver-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: flip-in-ver-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes flip-in-ver-right {
+  0% {
+    transform: rotateY(-80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-in-ver-right {
+  0% {
+    transform: rotateY(-80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+/** aquí se aplica un breakpoint para tablet**/
+@media screen and (min-width: 768px) {
+  .carousel-item {
+    width: 80%;
+    border-radius: 20px;
+  }
+}
+/** aquí se aplica un breakpoint para desktop**/
+@media screen and (min-width: 1024px) {
+  .carousel-item {
+    width: 70%;
+    border-radius: 50px;
+  }
+}
+/** Aquí inicia el estilo de la pagina menú" **/
+/**mobile first**/
+body .containerMenu {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "main" "footer";
+}
+
+/**aquí inicia el estilo del main de la página menu**/
+.mainMenu {
+  width: 100%;
+  color: #990000;
+  font-weight: bold;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  background-color: #F3CF7A;
+  border-style: double;
+  border-width: 5px;
+  border-color: #BE6A15;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  width: 100%;
+  text-align: center;
+}
+.mainMenu h2 {
+  text-align: center;
+  padding: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  margin-bottom: 10px;
+}
+.mainMenu h2:hover {
+  color: #F3CF7A;
+  background-color: #990000;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #BE6A15;
+}
+.mainMenu iframe {
+  padding: 5px;
+  border-style: dotted;
+  border-width: 5px;
+  border-color: #BE6A15;
+  border-radius: 20px;
+}
+
+.flip-in-ver-right {
+  width: 100%;
+  -webkit-animation: flip-in-ver-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: flip-in-ver-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes flip-in-ver-right {
+  0% {
+    transform: rotateY(-80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+/** Aquí inicia el estilo de la página galería **/
+/**mobile first**/
+body .containerGaleria {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "main" "footer";
+}
+
+/**aquí inicia el estilo del main de la página galería**/
+.mainGaleria {
+  width: 100%;
+  color: #990000;
+  font-weight: bold;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  background-color: #F3CF7A;
+  border-style: double;
+  border-width: 5px;
+  border-color: #BE6A15;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+.mainGaleria .subtituloCafeteria {
+  text-align: center;
+  padding: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+.mainGaleria .subtituloCafeteria:hover {
+  color: #F3CF7A;
+  background-color: #990000;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #BE6A15;
+}
+.mainGaleria .galeriaCdmx {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-template-areas: "cafeteria1" "cafeteria2" "cafeteria3" "cafeteria4" "cafeteria10" "cafeteria11";
+}
+.mainGaleria .subtituloVeracruz {
+  text-align: center;
+  padding: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+.mainGaleria .galeriaVeracruz {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-template-areas: "cafeteria5" "cafeteria" "cafeteria7" "cafeteria8" "cafeteria9" "cafeteria12";
+}
+.mainGaleria .cafeteria1 {
+  grid-area: cafeteria1;
+}
+.mainGaleria .cafeteria2 {
+  grid-area: cafeteria2;
+}
+.mainGaleria .cafeteria3 {
+  grid-area: cafeteria3;
+}
+.mainGaleria .cafeteria4 {
+  grid-area: cafeteria4;
+}
+.mainGaleria .cafeteria5 {
+  grid-area: cafeteria5;
+}
+.mainGaleria .cafeteria6 {
+  grid-area: cafeteria6;
+}
+.mainGaleria .cafeteria7 {
+  grid-area: cafeteria7;
+}
+.mainGaleria .cafeteria8 {
+  grid-area: cafeteria8;
+}
+.mainGaleria .cafeteria9 {
+  grid-area: cafeteria9;
+}
+.mainGaleria .cafeteria11 {
+  grid-area: cafeteria11;
+}
+.mainGaleria .cafeteria12 {
+  grid-area: cafeteria12;
+}
+.mainGaleria .estiloG {
+  padding: 10px;
+  border-style: dotted;
+  border-width: 5px;
+  border-color: #BE6A15;
+  border-radius: 20px;
+  width: 100%;
+}
+.mainGaleria .estiloG .imgStyleG {
+  border-radius: 20px;
+  width: 100%;
+}
+.mainGaleria .estiloG .scale:hover {
+  transform: scale(1.2);
+  transition: all, 1s;
+}
+
+/** aquí se aplica un breakpoint para tablet**/
+@media screen and (min-width: 768px) {
+  .mainGaleria .galeriaCdmx {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-template-areas: "cafeteria1 cafeteria2" "cafeteria3 cafeteria4" "cafeteria10 cafeteria11";
+  }
+  .mainGaleria .galeriaVeracruz {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-template-areas: "cafeteria5 cafeteria" "cafeteria7 cafeteria8" "cafeteria9 cafeteria12";
+  }
+}
+/** aquí se aplica un breakpoint para desktop**/
+@media screen and (min-width: 1024px) {
+  .mainGaleria .galeriaCdmx {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-template-areas: "cafeteria1 cafeteria2 cafeteria3" "cafeteria4 cafeteria10 cafeteria11";
+  }
+  .mainGaleria .galeriaVeracruz {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-template-areas: "cafeteria5 cafeteria cafeteria7" "cafeteria8 cafeteria9 cafeteria12";
+  }
+}
+/** aquí termina el estilo de galeria**/
+/** Aquí inicia el estilo de la pagina contacto **/
+/**mobile first**/
+body .containerContacto {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "main" "footer";
+}
+
+/**aquí inicia el estilo del main de la página contacto**/
+.mainContacto {
+  width: 100%;
+  color: #990000;
+  font-weight: bold;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  background-color: #F3CF7A;
+  border-style: double;
+  border-width: 5px;
+  border-color: #BE6A15;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding: 100px;
+}
+.mainContacto .flip-in-ver-right {
+  border-style: double;
+  border-width: 5px;
+  padding: 20px;
+  border-color: #BE6A15;
+  border-radius: 20px;
+}
+.mainContacto .flip-in-ver-right button:hover {
+  transform: scale(1.5);
+  transition: all, 0.5s;
+}
+
+/** final de estilo responsive**//*# sourceMappingURL=style.css.map */
