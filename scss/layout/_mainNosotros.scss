@@ -2,8 +2,13 @@
 
 .mainNosotros{
     @include mainStyle;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". h2 ."
+    "p1 p1 p1" "p2 p2 p2" "p3 p3 p3" "pic pic pic";
 
     h2{
+        grid-area: h2;
         text-align: center;
         padding: 10px;
         border-style: solid;
@@ -15,6 +20,22 @@
             @include hover
         }
         }
+    }
+
+    .p1{
+        grid-area: p1;
+    }
+
+    .p2{
+        grid-area: p2;
+    }
+
+    .p3{
+        grid-area: p3;
+    }
+
+    .slide{
+        grid-area: pic;
     }
 
     .flip-in-ver-right{
@@ -29,17 +50,21 @@
 /** aquí se aplica un breakpoint para tablet**/
 
     @include tablet{
-        .carousel-item{
-            width: 80%;
-            border-radius: 20px;
+        .mainNosotros{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: ". h2 h2 ." "p1 p1 p1 p1" "p2 p2 p2 p2" "p3 p3 p3 p3" ". pic pic .";
         }
     }
 
 /** aquí se aplica un breakpoint para desktop**/
 
     @include desktop{
-        .carousel-item{
-            width: 70%;
-            border-radius: 50px;
+        .mainNosotros{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: ". h2 ." "p1 p1 p1" "p2 p2 p2" "p3 p3 p3" ". pic .";
         }
     }
+
+/** Aquí termina el estilo principal de la página nosotros**/

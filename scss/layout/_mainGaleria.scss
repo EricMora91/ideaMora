@@ -5,11 +5,11 @@
 
     .subtituloCafeteria{
         @include subtitulosGaleria;
-
-    &:hover{
-        @include hover
+        
+        &:hover{
+            @include hover
+            }
         }
-    }
 
     .galeriaCdmx{
         @include styleGaleria;
@@ -21,10 +21,6 @@
         "cafeteria10"
         "cafeteria11";
         }
-
-    .subtituloVeracruz{
-        @extend .subtituloCafeteria;
-    }
 
     .galeriaVeracruz{
         @include styleGaleria;
@@ -83,7 +79,7 @@
 
     .estiloG{
         padding: 10px;
-        border-style: dotted;
+        border-style: solid;
         border-width: 5px;
         border-color: #BE6A15;
         border-radius: 20px;
@@ -141,4 +137,4 @@
     }
 }
 
-/** aquí termina el estilo de galeria**/
+/** aquí termina el estilo principal de la página de galeria**/

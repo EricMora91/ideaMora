@@ -10,7 +10,8 @@
 font-family: 'Yusei Magic', sans-serif;
 font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
 
-    /**mobile first**/
+
+/**mobile first**/
 
     body{
         background-color: $bg-color-body;
@@ -19,7 +20,6 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; **/
             @include grillaMobile;
             grid-template-areas: 
             "header"
-            "nav"
             "main"
             "aside"
             "footer";

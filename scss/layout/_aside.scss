@@ -1,11 +1,14 @@
 /**aquí inicia el estilo del contenido aparte**/
 
 aside{
-    @include grillaMobile;
+    width: 100%;
+    display: grid;
+    justify-items: center;
     gap: 10px;
+    grid-template-columns:1fr; 
     grid-template-areas: 
     "p" 
-    "img";
+    "slide";
     grid-area: aside;
     color: $color-aside;
     font-style: italic;
@@ -19,28 +22,42 @@ aside{
 
     .p{
         grid-area: p;
-        padding-left: 20px;
+        text-align: center;
     }
 
     .slide{
-        width: 90%;
+        width: 80%;
+        grid-area: slide;
 
         .carousel-inner .carousel-item a picture .img{
-            grid-area: img;
             border-radius: 50px;
             padding: 30px;
         }
     }
+}
+
+/**Aquí se usa estilo responsive para tablet**/
 
     @include tablet{
-        .slide{
-            width: 60%;
-    }
-    }
-
-    @include desktop{
-        .slide{
-            width: 40%;
+        aside {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-areas: 
+            ". p ."
+            ". slide .";
         }
     }
-}
+
+/**Aquí se usa estilo responsive para desktop**/
+
+    @include desktop{
+        aside {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            ". p ."
+            ". slide .";
+        }
+    } 
+
+/**Aquí termina el estilo del aside**/

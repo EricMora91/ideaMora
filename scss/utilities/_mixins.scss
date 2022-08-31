@@ -1,9 +1,14 @@
 @mixin grillaMobile {
-    width: 100%;
     display: grid;
     justify-items: center;
     grid-template-columns:1fr;  
 }
+
+@mixin navStyle {
+    padding: 5px;
+    
+}
+
 @mixin mainStyle {
     width: 100%;
     color: $color-main;
@@ -30,8 +35,8 @@
     border-width: 5px;
 }
 
-@mixin borderDotted{
-    border-style: dotted;
+@mixin borderSolid{
+    border-style: solid;
     border-width: 5px;
 }
 
@@ -41,8 +46,6 @@
     border-style: solid;
     border-width: 5px;
     border-color: #BE6A15;
-    margin-right:  100px;
-    margin-left: 100px;
     margin-bottom: 10px;
 }
 

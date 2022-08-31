@@ -5,7 +5,9 @@ header{
     gap: 10px;
     grid-template-areas:
     "titulo"
-    "logo";   
+    "subt"
+    "logo"
+    "nav";   
     grid-area: header;
 
     .titulo{
@@ -15,6 +17,15 @@ header{
         font-size: 50px;
         font-family: $font-header;
         padding-top: 20px;
+        text-align: center;
+    }
+
+    .subt{
+        grid-area: subt;
+        color: $color-subt;
+        font-weight: bold;
+        font-size: 25px;
+        font-family: $font-subt;
     }
 
     .logo{
@@ -27,13 +38,89 @@ header{
         }
     }
 
+    .navbar{
+        background-color:#990000;
+        grid-area: nav;
+        @include borderRad;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li{
+                @include navStyle;
+
+                & .nav-link:link{
+                    background-color:$bg-color-link;
+                }
+            
+                & .nav-link:visited{
+                    background-color: $bg-color-visited;
+                }
+            
+                & .nav-link:hover{
+                    background-color: $bg-color-nav-hover;  
+                    @include borderRad
+                }
+            
+                & .nav-link:active{
+                    background-color: $bg-color-active;
+                    transition: all,0s;
+                }
+            
+                & .inicio{
+                    grid-area: inicio;
+                }
+            
+                & .nosotros{
+                    grid-area: nosotros;
+                }
+            
+                & .menú{
+                    grid-area: menú; 
+                }
+            
+                & .galeria{
+                    grid-area: galeria;
+                }
+            
+                & .contacto{
+                    grid-area: contacto;
+                }
+
+                & a{
+                    font-family:$font-principal;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }            
+        }
+    }
+
+    /**Estilo responsive desktop**/ 
+
     @include desktop{
-        grid-template-columns:repeat(3, 1fr);
+        grid-template-columns: 1fr 3fr 1fr;
         grid-template-areas:
-        ". . ."
-        "titulo titulo titulo"
-        "logo logo logo";
-        justify-items: start;
+        ". titulo ."
+        ". subt ."
+        "logo nav .";
+        justify-items: center;
+        padding-right: 50px;
         padding-left: 50px;
+
+        .logo{
+            margin-bottom: 20px;
+        }
+
+        .navbar{
+            margin-top: 100px;
+        }
     }
 }
+
+/**Aquí termina el estilo del header**/

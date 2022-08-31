@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /**body**/
 /**header**/
+/**subtitulo**/
 /**nav**/
 /**main**/
 /**aside**/
@@ -28,22 +29,21 @@ body {
   background-color: #990000;
 }
 body .containerInicio {
-  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "nav" "main" "aside" "footer";
+  grid-template-areas: "header" "main" "aside" "footer";
 }
 
 /**aquí inicia el estilo del header**/
 header {
-  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
   gap: 10px;
-  grid-template-areas: "titulo" "logo";
+  grid-template-areas: "titulo" "subt" "logo" "nav";
   grid-area: header;
+  /**Estilo responsive desktop**/
 }
 header .titulo {
   grid-area: titulo;
@@ -52,6 +52,14 @@ header .titulo {
   font-size: 50px;
   font-family: "Yusei Magic", sans-serif;
   padding-top: 20px;
+  text-align: center;
+}
+header .subt {
+  grid-area: subt;
+  color: #BE6A15;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
 }
 header .logo {
   grid-area: logo;
@@ -64,73 +72,81 @@ header .logo:hover {
   transform: rotate(6.28rad);
   transition: all, 1s;
 }
-@media screen and (min-width: 1024px) {
-  header {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: ". . ." "titulo titulo titulo" "logo logo logo";
-    justify-items: start;
-    padding-left: 50px;
-  }
-}
-
-/**aquí inicia el estilo del nav**/
-.navbar {
+header .navbar {
   background-color: #990000;
   grid-area: nav;
   border-style: solid;
   border-width: 5px;
   border-color: #BE6A15;
   border-radius: 5px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.navbar ul {
+header .navbar ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.navbar ul li .nav-link:link {
+header .navbar ul li {
+  padding: 5px;
+}
+header .navbar ul li .nav-link:link {
   background-color: #BE6A15;
 }
-.navbar ul li .nav-link:visited {
+header .navbar ul li .nav-link:visited {
   background-color: #990000;
 }
-.navbar ul li .nav-link:hover {
+header .navbar ul li .nav-link:hover {
   background-color: #990000;
   border-style: solid;
   border-width: 5px;
   border-color: #BE6A15;
   border-radius: 5px;
 }
-.navbar ul li .nav-link:active {
+header .navbar ul li .nav-link:active {
   background-color: #F3CF7A;
   transition: all, 0s;
 }
-.navbar ul li a {
+header .navbar ul li .inicio {
+  grid-area: inicio;
+}
+header .navbar ul li .nosotros {
+  grid-area: nosotros;
+}
+header .navbar ul li .menú {
+  grid-area: menú;
+}
+header .navbar ul li .galeria {
+  grid-area: galeria;
+}
+header .navbar ul li .contacto {
+  grid-area: contacto;
+}
+header .navbar ul li a {
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
 }
-.navbar ul li .inicio {
-  grid-area: inicio;
-}
-.navbar ul li .nosotros {
-  grid-area: nosotros;
-}
-.navbar ul li .menú {
-  grid-area: menú;
-}
-.navbar ul li .galeria {
-  grid-area: galeria;
-}
-.navbar ul li .contacto {
-  grid-area: contacto;
+@media screen and (min-width: 1024px) {
+  header {
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: ". titulo ." ". subt ." "logo nav .";
+    justify-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  header .logo {
+    margin-bottom: 20px;
+  }
+  header .navbar {
+    margin-top: 100px;
+  }
 }
 
+/**Aquí termina el estilo del header**/
 /**aquí inicia el estilo del main**/
 .principal {
-  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
@@ -149,8 +165,6 @@ header .logo:hover {
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
-  /** aquí se aplica un breakpoint para tablet**/
-  /** aquí se aplica un breakpoint para desktop**/
 }
 .principal .subtitulo {
   grid-area: subtitulo;
@@ -159,6 +173,7 @@ header .logo:hover {
   border-width: 5px;
   border-color: #BE6A15;
   margin-bottom: 10px;
+  text-align: center;
 }
 .principal .subtitulo:hover {
   color: #F3CF7A;
@@ -168,11 +183,11 @@ header .logo:hover {
   border-color: #BE6A15;
 }
 .principal .estiloPromo {
-  padding: 5px;
-  border-style: dotted;
+  padding: 30px;
+  border-style: solid;
   border-width: 5px;
   border-color: #BE6A15;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 .principal .estiloPromo .imgStyle {
   border-radius: 20px;
@@ -209,14 +224,17 @@ header .logo:hover {
 .principal .promo8 {
   grid-area: promo8;
 }
+
+/** aquí se aplica un breakpoint para tablet**/
 @media screen and (min-width: 768px) {
   .principal {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "subtitulo subtitulo" "promo promo1" "promo2 promo3" "promo4 promo5" "promo6 promo7" "promo8 .";
   }
 }
+/** aquí se aplica un breakpoint para desktop**/
 @media screen and (min-width: 1024px) {
   .principal {
     display: grid;
@@ -225,15 +243,15 @@ header .logo:hover {
     grid-template-areas: ". subtitulo ." "promo promo1 promo2" "promo3 promo4 promo5" "promo6 promo7 promo8";
   }
 }
-
+/**Aquí termina el estilo del main**/
 /**aquí inicia el estilo del contenido aparte**/
 aside {
   width: 100%;
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr;
   gap: 10px;
-  grid-template-areas: "p" "img";
+  grid-template-columns: 1fr;
+  grid-template-areas: "p" "slide";
   grid-area: aside;
   color: black;
   font-style: italic;
@@ -248,44 +266,47 @@ aside {
 }
 aside .p {
   grid-area: p;
-  padding-left: 20px;
+  text-align: center;
 }
 aside .slide {
-  width: 90%;
+  width: 80%;
+  grid-area: slide;
 }
 aside .slide .carousel-inner .carousel-item a picture .img {
-  grid-area: img;
   border-radius: 50px;
   padding: 30px;
 }
-@media screen and (min-width: 768px) {
-  aside .slide {
-    width: 60%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  aside .slide {
-    width: 40%;
-  }
-}
 
+/**Aquí se usa estilo responsive para tablet**/
+@media screen and (min-width: 768px) {
+  aside {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: ". p ." ". slide .";
+  }
+}
+/**Aquí se usa estilo responsive para desktop**/
+@media screen and (min-width: 1024px) {
+  aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". p ." ". slide .";
+  }
+}
+/**Aquí termina el estilo del aside**/
 /**aquí inicia el estilo del footer**/
 .piePagina {
-  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
+  width: 100%;
   gap: 10px;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
-  grid-template-areas: ". p2 ." ". iconos ." ". h6 .";
+  grid-template-areas: "p2" "iconos" "sucMex" "mapMex" "sucVer" "mapVer" "." ".";
   grid-area: footer;
-  color: #990000;
+  color: black;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  background-image: url("../images/footer3.jpg");
-  background-size: contain;
-  background-position: bottom;
   padding-top: 20px;
   border-style: double;
   border-width: 5px;
@@ -293,33 +314,77 @@ aside .slide .carousel-inner .carousel-item a picture .img {
 }
 .piePagina .p2 {
   grid-area: p2;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  padding: 10px;
+}
+.piePagina .p2:hover {
+  background-color: #F3CF7A;
 }
 .piePagina .iconos {
   grid-area: iconos;
+  padding: 0px;
+  margin: 0px;
+  filter: invert(84%) sepia(98%) saturate(6090%) hue-rotate(308deg) brightness(112%) contrast(91%);
 }
 .piePagina .iconos li {
   display: block;
   text-decoration: none;
+  padding: 20px;
 }
-.piePagina .iconos:hover {
+.piePagina .iconos li:hover {
   transform: scale(2);
   transition: all, 2s;
 }
-.piePagina .h6 {
-  grid-area: h6;
-  text-shadow: 1px 1px 1px #F3CF7A;
-  color: black;
+.piePagina .sucMex {
+  display: grid;
+  grid-area: sucMex;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  padding: 10px;
+  align-items: center;
+}
+.piePagina .sucVer {
+  display: grid;
+  grid-area: sucVer;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  padding: 10px;
+  align-items: center;
+}
+.piePagina .sucursales:hover {
+  background-color: #F3CF7A;
+}
+.piePagina .mapMex {
+  grid-area: mapMex;
+}
+.piePagina .mapVer {
+  grid-area: mapVer;
 }
 
+/**Aquí se usa estilo responsive para tablet**/
+@media screen and (min-width: 768px) {
+  .piePagina {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-areas: "sucMex p2 sucVer" "mapMex iconos mapVer" ". . .";
+  }
+}
 /**aquí termina el estilo del index**/
 /**Aquí inicia el estilo de la página nosotros**/
 /**mobile first**/
 body .containerNosotros {
-  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "nav" "main" "footer";
+  grid-template-areas: "header" "main" "footer";
 }
 
 /**aquí inicia el estilo del main de la página nosotros**/
@@ -336,8 +401,12 @@ body .containerNosotros {
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: ". h2 ." "p1 p1 p1" "p2 p2 p2" "p3 p3 p3" "pic pic pic";
 }
 .mainNosotros h2 {
+  grid-area: h2;
   text-align: center;
   padding: 10px;
   border-style: solid;
@@ -351,6 +420,22 @@ body .containerNosotros {
   border-width: 5px;
   border-style: solid;
   border-color: #BE6A15;
+}
+
+.p1 {
+  grid-area: p1;
+}
+
+.p2 {
+  grid-area: p2;
+}
+
+.p3 {
+  grid-area: p3;
+}
+
+.slide {
+  grid-area: pic;
 }
 
 .flip-in-ver-right {
@@ -382,26 +467,28 @@ body .containerNosotros {
 }
 /** aquí se aplica un breakpoint para tablet**/
 @media screen and (min-width: 768px) {
-  .carousel-item {
-    width: 80%;
-    border-radius: 20px;
+  .mainNosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". h2 h2 ." "p1 p1 p1 p1" "p2 p2 p2 p2" "p3 p3 p3 p3" ". pic pic .";
   }
 }
 /** aquí se aplica un breakpoint para desktop**/
 @media screen and (min-width: 1024px) {
-  .carousel-item {
-    width: 70%;
-    border-radius: 50px;
+  .mainNosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". h2 ." "p1 p1 p1" "p2 p2 p2" "p3 p3 p3" ". pic .";
   }
 }
+/** Aquí termina el estilo principal de la página nosotros**/
 /** Aquí inicia el estilo de la pagina menú" **/
 /**mobile first**/
 body .containerMenu {
-  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "nav" "main" "footer";
+  grid-template-areas: "header" "main" "footer";
 }
 
 /**aquí inicia el estilo del main de la página menu**/
@@ -418,8 +505,11 @@ body .containerMenu {
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
-  width: 100%;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "tituloM" "picM";
+  justify-items: center;
 }
 .mainMenu h2 {
   text-align: center;
@@ -428,6 +518,7 @@ body .containerMenu {
   border-width: 5px;
   border-color: #BE6A15;
   margin-bottom: 10px;
+  grid-area: tituloM;
 }
 .mainMenu h2:hover {
   color: #F3CF7A;
@@ -436,20 +527,26 @@ body .containerMenu {
   border-style: solid;
   border-color: #BE6A15;
 }
-.mainMenu iframe {
-  padding: 5px;
-  border-style: dotted;
+.mainMenu .picM {
+  width: 100%;
+  padding: 20px;
+  border-style: solid;
   border-width: 5px;
   border-color: #BE6A15;
-  border-radius: 20px;
+  border-radius: 50px;
+  grid-area: picM;
 }
-
-.flip-in-ver-right {
-  width: 100%;
+.mainMenu .picM:hover {
+  color: #F3CF7A;
+  background-color: #990000;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #BE6A15;
+}
+.mainMenu .picM .flip-in-ver-right {
   -webkit-animation: flip-in-ver-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: flip-in-ver-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
 @keyframes flip-in-ver-right {
   0% {
     transform: rotateY(-80deg);
@@ -460,14 +557,31 @@ body .containerMenu {
     opacity: 1;
   }
 }
+
+/** aquí se aplica un breakpoint para tablet**/
+@media screen and (min-width: 768px) {
+  .mainMenu .picM {
+    width: 100vh;
+    padding: 20px;
+    border-radius: 50px;
+  }
+}
+/** aquí se aplica un breakpoint para desktop**/
+@media screen and (min-width: 1024px) {
+  .mainMenu .picM {
+    width: 100vh;
+    padding: 20px;
+    border-radius: 50px;
+  }
+}
+/**Aquí termina el estilo principal de la página menu**/
 /** Aquí inicia el estilo de la página galería **/
 /**mobile first**/
 body .containerGaleria {
-  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "nav" "main" "footer";
+  grid-template-areas: "header" "main" "footer";
 }
 
 /**aquí inicia el estilo del main de la página galería**/
@@ -485,17 +599,15 @@ body .containerGaleria {
   padding-bottom: 30px;
   padding-left: 30px;
 }
-.mainGaleria .subtituloCafeteria, .mainGaleria .subtituloVeracruz {
+.mainGaleria .subtituloCafeteria {
   text-align: center;
   padding: 10px;
   border-style: solid;
   border-width: 5px;
   border-color: #BE6A15;
-  margin-right: 100px;
-  margin-left: 100px;
   margin-bottom: 10px;
 }
-.mainGaleria .subtituloCafeteria:hover, .mainGaleria .subtituloVeracruz:hover {
+.mainGaleria .subtituloCafeteria:hover {
   color: #F3CF7A;
   background-color: #990000;
   border-width: 5px;
@@ -551,7 +663,7 @@ body .containerGaleria {
 }
 .mainGaleria .estiloG {
   padding: 10px;
-  border-style: dotted;
+  border-style: solid;
   border-width: 5px;
   border-color: #BE6A15;
   border-radius: 20px;
@@ -600,15 +712,14 @@ body .containerGaleria {
     grid-template-areas: "cafeteria5 cafeteria cafeteria7" "cafeteria8 cafeteria9 cafeteria12";
   }
 }
-/** aquí termina el estilo de galeria**/
+/** aquí termina el estilo principal de la página de galeria**/
 /** Aquí inicia el estilo de la pagina contacto **/
 /**mobile first**/
 body .containerContacto {
-  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "nav" "main" "footer";
+  grid-template-areas: "header" "main" "footer";
 }
 
 /**aquí inicia el estilo del main de la página contacto**/
@@ -625,7 +736,22 @@ body .containerContacto {
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
-  padding: 100px;
+}
+.mainContacto .subtc {
+  text-align: center;
+  grid-area: subtitulo;
+  padding: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BE6A15;
+  margin-bottom: 10px;
+}
+.mainContacto .subtc:hover {
+  color: #F3CF7A;
+  background-color: #990000;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #BE6A15;
 }
 .mainContacto .flip-in-ver-right {
   border-style: double;

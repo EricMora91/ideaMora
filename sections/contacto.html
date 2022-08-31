@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,61 +11,66 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="containerContacto">
-        <header>
-            <h1 class="titulo">La Bruja Tuerta</h1>
-            <img class="logo" src="../images/brujaTuerta.jpg" alt="Logo de una bruja con un caldero" height="200px" width="200px">
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-light bg">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<div class="containerContacto"> <!--Aquí inicia el contenedor general-->
+    <header> <!--Aquí inicia el encabezado de la página web-->
+        <h1 class="titulo">La Bruja Tuerta</h1> <!--Nombre del negocio-->
+        <h3 class="subt">Cafetería Temática</h3>
+        <img class="logo" src="../images/brujaTuerta1.jpg" alt="Logo de una bruja con un caldero" height="200px" width="200px"> <!--Logo del negocio -->
+        <nav class="navbar navbar-expand-lg navbar-light bg"> <!--Aquí inicia la barra de navegación -->
+            <div class="container-fluid"> <!--Contenedor de la barra de navegación -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!--Barra de hamburguesa -->
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a> <!-- Hipervínculo a la página inicio-->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./nosotros.html">Nosotros</a>
+                            <a class="nav-link active" href="./nosotros.html">Nosotros</a> <!--Hipervínculo a la página nosotros -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./menu.html">Menú</a>
+                            <a class="nav-link active" href="./menu.html">Menú</a> <!--Hipervínculo a la página menú -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./galeria.html">Galería</a>
+                            <a class="nav-link active" href="./galeria.html">Galería</a> <!--Hipervínculo a la página galería -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./contacto.html">Contacto</a>
+                            <a class="nav-link active" href="./contacto.html">Contacto</a> <!--Hipervínculo a la página contacto -->
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <main class="mainContacto">
-            <form class="flip-in-ver-right">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">¡Contáctanos!</div>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Escribe aquí tus comentarios</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-danger">Enviar</button>
-                <button type="reset" class="btn btn-danger">Borrar</button>
-            </form>
-        </main>
-        <footer class="piePagina">
-            <p class="p2">Redes Sociales</p>
-            <ul class="iconos">
-                <li><a href="https://es-la.facebook.com/labrujatuerta.ver/" target="_blank"><img src="../images/footer1.webp" alt="logo de facebook" height="30px" width="30px"></a></li>
-                <li><a href="https://www.instagram.com/labrujatuerta.ver/?hl=es" target="_blank"><img src="../images/footer2.webp" alt="logo de instagram" height="30px" width="30px"></a></li>
-            </ul>
-            <h6 class="h6">La Bruja Tuerta Cafetería Temática</h6>   
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
+    </header> <!--Termina el encabezado de la página -->
+    <main class="mainContacto"> <!--Inicia el contenido principal-->
+        <h2 class="subtc">Envíanos tu consulta</h2> <!--Formulario -->
+        <form class="flip-in-ver-right"> 
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label> <!-- -->
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">¡Contáctanos!</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Escribe aquí tus comentarios</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Enviar</button>
+            <button type="reset" class="btn btn-danger">Borrar</button>
+        </form>
+    </main> <!--Termina el contenido principal-->
+    <footer class="piePagina">  <!--Inicia el contenido de pie de página-->
+        <p class="p2">Redes Sociales</p>
+        <ul class="iconos">
+            <li><a href="https://es-la.facebook.com/labrujatuerta.ver/" target="_blank"><img src="/images/facebook.png" alt="logo de facebook" height="60px" width="60px"></a></li> <!--Enlace para dirigirse a la página de facebook vinculada al sitio web -->
+            <li><a href="https://www.instagram.com/labrujatuerta.ver/?hl=es" target="_blank"><img src="/images/instagram.png" alt="logo de instagram" height="60px" width="60px"></a></li> <!--Enlace para dirigirse a la página de instagram vinculada al sitio web -->
+        </ul>
+        <h6 class="sucursales sucMex">Sucursal CDMX</h6>
+        <iframe class="mapMex" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.765458052329!2d-99.17914037048345!3d19.292563176491097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce01d29260ca91%3A0x2eccc83116ded3ca!2sLa%20Bruja%20Tuerta%20CDMX!5e0!3m2!1ses-419!2smx!4v1661907449569!5m2!1ses-419!2smx" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!--Localización de la sucursal en la CDMX mediante un mapa-->
+        <h6 class="sucursales sucVer">Sucursal Veracruz</h6>
+        <iframe class="mapVer" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.9598009247734!2d-96.14560568582918!3d19.19695805314947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c346b8c2153057%3A0xd79a2de813f92b49!2sLa%20Bruja%20Tuerta!5e0!3m2!1ses-419!2smx!4v1661907178333!5m2!1ses-419!2smx" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!--Localización de la sucursal en Veracruz mediante un mapa-->
+    </footer> <!--Termina el contenido de pie de página-->  
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
 </body>
 </html>

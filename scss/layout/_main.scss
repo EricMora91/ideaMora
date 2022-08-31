@@ -24,6 +24,7 @@
         border-width: 5px;
         border-color: $border-color;
         margin-bottom: 10px;
+        text-align: center;
 
         &:hover{
             color: $color-main-hover;
@@ -35,17 +36,17 @@
     }
 
     .estiloPromo{
-        padding: 5px;
-        @include borderDotted;
+        padding: 30px;
+        @include borderSolid;
         border-color: $border-color;
-        border-radius: 20px;
+        border-radius: 25px;
 
-    .imgStyle{
+        .imgStyle{
             border-radius: 20px;
             width: 100%;
         }
 
-    .scale:hover{
+        .scale:hover{
             transform: scale(1.2);
             transition: all, 1s;
         }
@@ -86,32 +87,38 @@
     .promo8{
         grid-area: promo8;
     }
+}
 
-/** aquí se aplica un breakpoint para tablet**/
+    /** aquí se aplica un breakpoint para tablet**/
 
     @include tablet{
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
-        "subtitulo subtitulo"
-        "promo promo1" 
-        "promo2 promo3" 
-        "promo4 promo5"
-        "promo6 promo7"
-        "promo8 .";
-    }
+        .principal{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "subtitulo subtitulo"
+            "promo promo1" 
+            "promo2 promo3" 
+            "promo4 promo5"
+            "promo6 promo7"
+            "promo8 .";
+        }
+        }
 
-/** aquí se aplica un breakpoint para desktop**/
+    /** aquí se aplica un breakpoint para desktop**/
 
     @include desktop{
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-        ". subtitulo ."
-        "promo promo1 promo2"
-        "promo3 promo4 promo5"
-        "promo6 promo7 promo8";
+            .principal{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            ". subtitulo ."
+            "promo promo1 promo2"
+            "promo3 promo4 promo5"
+            "promo6 promo7 promo8";
+        }
     }
-}
+
+/**Aquí termina el estilo del main**/

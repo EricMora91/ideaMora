@@ -2,47 +2,104 @@
 
 .piePagina{
     @include grillaMobile;
+    width: 100%;
     gap: 10px;
-    grid-template-columns:0.5fr 1fr 0.5fr;
     grid-template-areas: 
-    ". p2 ."
-    ". iconos ."
-    ". h6 .";
+    "p2"
+    "iconos"
+    "sucMex"
+    "mapMex"
+    "sucVer"
+    "mapVer"
+    "."
+    ".";
     grid-area: footer;
-    color: $color-footer;
+    color: black;
     font-family: $font-principal;
     font-size: 20px;
     font-weight: bold;
-    background-image: url("../images/footer3.jpg");
-    background-size: contain;
-    background-position: bottom;
     padding-top: 20px;
     @include borderDouble;
     border-color: $border-color;
 
     .p2{
         grid-area: p2;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #BE6A15;
+        padding: 10px;
+
+        &:hover{
+            background-color: #F3CF7A;
+            }
     }
 
     .iconos{
         grid-area: iconos;
+        padding: 0px;
+        margin: 0px;
+        filter: invert(84%) sepia(98%) saturate(6090%) hue-rotate(308deg) brightness(112%) contrast(91%);
 
         li{
             display: block;
             text-decoration: none;
-        }
+            padding: 20px;
 
-        &:hover{
-            transform: scale(2);
-            transition: all,2s ;
+            &:hover{
+                transform: scale(2);
+                transition: all,2s ;
+            }
         }
-    
     }
 
-    .h6{
-        grid-area: h6;
-        text-shadow: 1px 1px 1px $shadow;
-        color: $color-h6;
+    .sucMex{
+        display: grid;
+        grid-area: sucMex;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #BE6A15;
+        padding: 10px;
+        align-items: center;
+        
+    }
+    
+    .sucVer{
+        display: grid;
+        grid-area: sucVer;
+        font-weight: bold;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #BE6A15;
+        padding: 10px;
+        align-items: center;
+    }
+    
+    .sucursales:hover{
+        background-color: #F3CF7A;
+    }
+    
+    .mapMex{
+        grid-area: mapMex;
+    }
+    
+    .mapVer{
+        grid-area: mapVer;
+    }    
+}
+
+/**Aquí se usa estilo responsive para tablet**/
+
+@media screen and (min-width: 768px) {
+    .piePagina {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        grid-template-areas:
+        "sucMex p2 sucVer" 
+        "mapMex iconos mapVer"
+        ". . ."
     }
 }
 
